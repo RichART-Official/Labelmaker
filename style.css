@@ -1,0 +1,128 @@
+body {
+	color: black;
+	margin: 0px;
+	padding: 0px;
+	;
+}
+
+.default-label {
+	color: black;
+	border: 2px black solid;
+	text-align: center;
+	padding: 30px 5px 30px 5px;
+}
+
+.default-label h1{
+	font-size: 20px;
+	text-transform: uppercase;
+	word-break:break-all;
+}
+
+.default-label h2{
+	text-transform: uppercase;
+	font-size: 18px;
+	max-width: 170px;
+	word-break:break-all;
+}
+
+.default-label h3 {
+	font-size: 12px;
+	max-width: 170px;
+	word-break:break-all;
+}
+
+.default-label p {
+	font-size: 10px;
+	margin-bottom: 0px;
+	width: 170px;
+	position: absolute;
+	bottom: 20px;
+	left:50%;
+	margin-left: -85px;
+	max-width: 95vw;
+	word-break:break-all;
+}
+
+#properties {
+	display: block;
+	background-color: orange;
+	z-index: 1000;
+	position:relative;
+	left: 0px;
+	padding: 20px 10px 25px 10px;
+}
+
+input {
+	width: 100%;
+}
+@media screen  {
+	
+	body {
+		background-color: #E4E4E4;
+	}
+}
+
+@media (min-width: 990px) {
+	#labels {
+	background-color: white;
+	border-radius: 0px;
+	margin-left:0px;
+	}
+	
+	.default-label {
+		height: 285px;
+		width: 170px;
+		text-align:center;
+		margin: 1px;
+	}
+	
+}
+
+@media print { 
+
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#properties, .navbar { 
+		display: none !important; 
+	}
+
+	@page {
+		margin: 0.05cm;
+		padding: 0px;
+	}
+	
+	#labels {
+		width: 100%;
+	}
+	
+	.default-label {
+		height: 285px;
+		width: 170px;
+	}
+	
+		div {page-break-inside: avoid;}
+}
+
+.row {
+	margin: 0px;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: none;
+	border-radius: 0px;
+}
+
+.btn {
+	margin-right: 15px;
+}
+
+.container-fluid {
+	padding: 0px;
+	margin: 0px;
+}
