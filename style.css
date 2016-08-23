@@ -113,8 +113,9 @@ input {
 		height: 68mm;
 		width: 170px;
 		text-align:center;
-		margin: 3px;
+		margin: 5px;
 		background-color: white;
+		border-radius:3px;
 	}
 	
 }
@@ -130,8 +131,9 @@ input {
 		height: 68mm;
 		width: 170px;
 		text-align:center;
-		margin: 3px;
+		margin: 5px;
 		background-color: white;
+		border-radius:3px;
 	}
 	
 	#labels {
