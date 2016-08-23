@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	$(".default-label").click(function(){
-		alert("succes");
+
+	$('#lable a').click(function(){
+		$(this).toggleClass("current");
 	});
 });

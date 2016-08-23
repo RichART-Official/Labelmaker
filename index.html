@@ -5,12 +5,19 @@
 	
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="/Assets/favIcon">
     <!--Scripts-->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
 			  src="https://code.jquery.com/jquery-3.1.0.slim.min.js"
 			  integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
 			  crossorigin="anonymous"></script>
+             
+			 
+         
+         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+		
+		
               
 
 	<!--Stylesheets-->
@@ -41,6 +48,7 @@
                      <span class="icon-bar"></span>
                     
                     <form method="post" class="book-properties ">
+                    
                         <label>Volledige naam</label>
                         <input placeholder="Jon Doe" type="text" class="name form-control"><br>
                         <label>Klas</label>
@@ -50,7 +58,7 @@
                         <label>School</label>
                         <input placeholder="Dolor College" type="text" class="school form-control" ><br>
                         <label>Vak</label>
-                        <textarea placeholder="Aardrijkskunde" rows ="2" type="text" class="subject form-control"></textarea><br>
+                        <textarea placeholder="Wiskunde" rows ="2" type="text" class="subject form-control"></textarea><br>
                         <label>Methode</label>
                         <textarea placeholder="Getal & Ruimte" rows ="2" type="text" class="method form-control"></textarea><br>
                         <label>Soort</label>
@@ -59,6 +67,7 @@
                               <option value="lesboek">Lesboek</option>
                               <option value="werkboek">Werkboek</option>
                               <option value="antwoordenboek">Antwoordenboek</option>
+                            
                         </select>
                         <input class="add form-control" placeholder="toevoeging" type="text" name="affix"><br>
                         <button class"btn btn-default" type="submit">Voeg toe</button> 
@@ -70,15 +79,19 @@
     	<div class="row col-sm-9">
         	<div class=" hidden-print navbar navbar-default col-xs-9">
             	<p class="navbar-brand">LabelMaker</p>
-            	<button type="button" onclick="window.print();" target="_blank" class="btn btn-default navbar-btn navbar-right pull-right"><img src="Assets/Printer.png" width="auto" height="25" alt=""/> </button>
+            	<button type="button" onclick="window.print();" target="_blank" class="btn btn-default navbar-btn navbar-right pull-right "><span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
+                <button disabled="disabled" class=" btn btn-default navbar-btn navbar-right pull-right" ><span class="glyphicon glyphicon-trash"  aria-hidden="true"></span></button>
             </div>
         	
-            <div id="labels" class="jumbotron col-xs-12">
+            	<div id="labels" class="jumbotron col-xs-12">
             	
-                
-                    
-                    	
-                       			
+                <!--                
+                <div class="remover col-xs-3">
+                	<button type="button" class="btn remove btn-danger">
+                    	<img src="Assets/remove.png" width="20" height="auto" alt=""/>
+                    </button>      
+                </div>
+                -->    			
                     					
                        
                </div>
@@ -89,9 +102,9 @@
     </div>
 </div>    
 <!--scripts-->
-<script src="remove.js"></script>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
+<script src="remove.js"></script>
 <!--Google Analytics-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

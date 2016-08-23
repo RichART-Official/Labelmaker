@@ -16,7 +16,8 @@ $(document).ready(function() {
 	$form.on("submit", function(e){
 		e.preventDefault();
 		
-		var $label = $("<div class='default-label col-xs-3'>");
+		
+		var $label = $("<a href='#' class='default-label col-xs-3'>");
 		var $subjectH2 = $("<h2>").html($subject.val());
 		var $methodH3 = $("<h3>").html($method.val());
 		var $sortH1 = $("<h1>").html($sort.val() + " " + $affix.val());
@@ -24,7 +25,15 @@ $(document).ready(function() {
 		
 		
 		$label.append($subjectH2).append($methodH3).append($sortH1).append($userP);
-		($label).prependTo($("#labels"));
+		$label.prependTo($("#labels"));
+	});
+
+/*Remover*/
+
+	var label = document.getElementsByClassName("default-label");
+	
+	$(label).click(function(){
+		$(this).toggleClass('.remove');
 	});
 
 });
