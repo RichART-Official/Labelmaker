@@ -30,44 +30,45 @@
 
 
 <div class="container-fluid">
-	<div class="row">
-		<div id="properties" class=" col-md-3 properties hidden-print">
-			<div id="form">
-			
-	
-				<h1>Nieuw label</h1>
+	<div  class="row">
+    	<div class="col-md-3 shell">
+            <div id="properties " data-spy="affix" data-offset-top="5" class="col-md-3 affix properties hidden-print">
+                <div id="form">
                 
-                 <span class="icon-bar"></span>
-                
-				<form method="post" class="book-properties ">
-                	<label>Volledige naam</label>
-                	<input placeholder="Jon Doe" type="text" class="name form-control"><br>
-                	<label>Klas</label>
-                    <input placeholder="6VA" type="text" class="class form-control" ><br>
-                	<label>Schoojaar</label>
-                    <input placeholder="2016/2017" type="text" class="semester form-control" ><br>
-                    <label>School</label>
-                    <input placeholder="Dolor College" type="text" class="school form-control" ><br>
-                    <label>Vak</label>
-					<input placeholder="Aardrijkskunde" type="text" class="subject form-control"><br>
-                    <label>Methode</label>
-					<input placeholder="Getal & Ruimte" type="text" class="method form-control"><br>
-                    <label>Soort</label>
-					<select class="sort form-control">
-						  <option value="schrift">Schrift</option>
-						  <option value="lesboek">Lesboek</option>
-						  <option value="werkboek">Werkboek</option>
-						  <option value="antwoordenboek">Antwoordenboek</option>
-					</select>
-					<input class="add form-control" placeholder="toevoeging" type="text" name="affix"><br>
-					<button class"form-control btn btn-success" type="submit">Voeg toe</button> 
-				</form>
-			</div>
-		</div>
-	
-	
+        
+                    <h1>Nieuw label</h1>
+                    
+                     <span class="icon-bar"></span>
+                    
+                    <form method="post" class="book-properties ">
+                        <label>Volledige naam</label>
+                        <input placeholder="Jon Doe" type="text" class="name form-control"><br>
+                        <label>Klas</label>
+                        <input placeholder="6VA" type="text" class="class form-control" ><br>
+                        <label>Schoojaar</label>
+                        <input placeholder="2016/2017" type="text" class="semester form-control" ><br>
+                        <label>School</label>
+                        <input placeholder="Dolor College" type="text" class="school form-control" ><br>
+                        <label>Vak</label>
+                        <input placeholder="Aardrijkskunde" type="text" class="subject form-control"><br>
+                        <label>Methode</label>
+                        <input placeholder="Getal & Ruimte" type="text" class="method form-control"><br>
+                        <label>Soort</label>
+                        <select class="sort form-control">
+                              <option value="schrift">Schrift</option>
+                              <option value="lesboek">Lesboek</option>
+                              <option value="werkboek">Werkboek</option>
+                              <option value="antwoordenboek">Antwoordenboek</option>
+                        </select>
+                        <input class="add form-control" placeholder="toevoeging" type="text" name="affix"><br>
+                        <button class"form-control btn btn-success" type="submit">Voeg toe</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+		
     	<div class="row col-md-9">
-        	<div class=" hidden-print navbar navbar-default">
+        	<div class=" hidden-print navbar navbar-default col-md-9">
             	<p class="navbar-brand">LabelMaker</p>
             	<button type="button" onclick="window.print();" target="_blank" class="btn btn-default navbar-btn navbar-right"><img src="Assets/Printer.png" width="auto" height="25" alt=""/> </button>
             </div>

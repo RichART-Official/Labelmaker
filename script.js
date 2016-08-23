@@ -16,7 +16,7 @@ $(document).ready(function() {
 	$form.on("submit", function(e){
 		e.preventDefault();
 		
-		var $label = $("<div class='default-label col-md-3 col-xs-3'>");
+		var $label = $("<div class='default-label col-xs-3'>");
 		var $subjectH2 = $("<h2>").html($subject.val());
 		var $methodH3 = $("<h3>").html($method.val());
 		var $sortH1 = $("<h1>").html($sort.val() + " " + $affix.val());
