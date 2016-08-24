@@ -26,10 +26,16 @@ $(document).ready(function() {
 		
 		$label.append($subjectH2).append($methodH3).append($sortH1).append($userP);
 		$label.prependTo($("#labels"));
-	
+		
+		$(".default-label").hover(function(){
+			$(this).toggleClass(".selected");
+		});
+		
 		$(".default-label").click(function(){
 			$(this).remove();
 		});
+		
+		
 	
 	});
 
