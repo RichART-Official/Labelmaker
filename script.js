@@ -26,15 +26,14 @@ $(document).ready(function() {
 		
 		$label.append($subjectH2).append($methodH3).append($sortH1).append($userP);
 		$label.prependTo($("#labels"));
-	});
-
-/*Remover*/
-
-	var label = document.getElementsByClassName("default-label");
 	
-	$(label).click(function(){
-		$(this).toggleClass('.remove');
+		$(".default-label").click(function(){
+			$(this).remove();
+		});
+	
 	});
+
+
 
 });
 	
