@@ -29,7 +29,7 @@ body {
 	color: black;
 	border: 2px black solid;
 	text-align: center;
-	padding: 10px 5px 10px 5px;
+	padding: 5px;
 }
 
 .default-label:hover {
@@ -42,7 +42,7 @@ body {
 	word-wrap: break-word;
 	word-break: normal;
 	position:relative;
-	padding-top: 10px;
+	padding-top: 3px;
 }
 
 .default-label h2{
