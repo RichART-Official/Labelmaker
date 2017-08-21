@@ -182,11 +182,12 @@ input {
 		overflow-x: hidden;
 		left: 800px;
 		transition: all 0.3s ease-in-out;
-
+		display: none;
 	}
 
 	.active{
 	left: 0px;
+	display: block;
 	}
 
 	.properties {
