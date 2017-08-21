@@ -2,28 +2,20 @@
 <html>
 <head>
 	<title>LabelMaker by RichART</title>
-	
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/png" href="/Assets/favIcon">
     <!--Scripts-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script
-			  src="https://code.jquery.com/jquery-3.1.0.slim.min.js"
-			  integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="
-			  crossorigin="anonymous"></script>
-             
-			 
-         
-         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-		
-		
-              
+
+
+
+
 
 	<!--Stylesheets-->
-		
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.min.css">
 </head>
 <body>
 
@@ -32,7 +24,7 @@
 			color: black;
 		}
 
-					
+
 	</style>
 
 
@@ -41,14 +33,14 @@
     	<div class="col-md-3 shell">
             <div id="properties " data-spy="affix" data-offset-top="5" class="col-xs-3 affix properties hidden-print">
                 <div id="form">
-                
-        
+
+
                     <h1>Nieuw label</h1>
-                    
+
                      <span class="icon-bar"></span>
-                    
+
                     <form method="post" class="book-properties ">
-                    
+
                         <label>Volledige naam</label>
                         <input placeholder="Jon Doe" type="text" class="name form-control"><br>
                         <label>Klas</label>
@@ -69,42 +61,50 @@
                               <option value="antwoorden- boek">Antwoordenboek</option>
                               <option value="Activiteiten- formulier">Activiteitenformulier</option>
                               <option value="">Overig</option>
-                            
+
                         </select>
                         <textarea class="add form-control" placeholder="toevoeging" type="text" name="affix"></textarea><br>
-                        <button class"btn btn-default" type="submit">Voeg toe</button> 
+                        <button class"btn btn-default" type="submit">Voeg toe</button>
                     </form>
                 </div>
             </div>
         </div>
-		
+
     	<div class="row col-sm-9">
         	<div class=" hidden-print navbar navbar-default col-xs-9">
             	<p class="navbar-brand">LabelMaker</p>
             	<button type="button" onclick="window.print();" target="_blank" class="btn btn-default navbar-btn navbar-right pull-right "><span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
-                <button disabled="disabled" class=" btn btn-default navbar-btn navbar-right pull-right" ><span class="glyphicon glyphicon-trash"  aria-hidden="true"></span></button>
+                <button disabled id="delete-btn" class=" btn btn-default navbar-btn navbar-right pull-right" ><span class="glyphicon glyphicon-trash"  aria-hidden="true"></span></button>
             </div>
-        	
+
             	<div id="labels" class="jumbotron col-xs-12">
-            	
-                <!--                
+
+                <!--
                 <div class="remover col-xs-3">
                 	<button type="button" class="btn remove btn-danger">
                     	<img src="Assets/remove.png" width="20" height="auto" alt=""/>
-                    </button>      
+                    </button>
                 </div>
-                -->    			
-                    					
-                       
+                -->
+
+
                </div>
-                
-               
+
+
             </div>
         </div>
     </div>
-</div>    
+    <div>
+        <img id="add-btn-mobile" src="Assets/add.svg" />
+    </div>
+</div>
 <!--scripts-->
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 <!--Google Analytics-->

@@ -13,16 +13,22 @@ body {
 		border: 2px black solid;
 		padding: 10px 5px 10px 5px;
 		border-radius:3px;
+		button{
+			position: absolute;
+			left: 50%;
+			bottom: 45%;
+			width: 74px;
+			height: 40px;
+			margin-left: -37px;
+			background-color: red;
+		}
 }
 
-.remover button{
-	position: absolute;
-	left: 50%;
-	bottom: 45%;
-	width: 74px;
-	height: 40px;
-	margin-left: -37px;
-	background-color: red;
+#add-btn-mobile {
+	display: none;
+}
+.selected {
+	background-color: blue !important;
 }
 
 .default-label {
@@ -30,47 +36,43 @@ body {
 	border: 2px black solid;
 	text-align: center;
 	padding: 5px;
-}
-
-.default-label:hover {
-	background-color: Orange;
-}
-
-.default-label h1{
-	font-size: 20px;
-	text-transform: uppercase;
-	word-wrap: break-word;
-	word-break: normal;
-	position:relative;
-	padding-top: 3px;
-}
-
-.default-label h2{
-	text-transform: uppercase;
-	font-size: 16px;
-	max-width: 170px;
-	word-wrap: break-word;
-	word-break: normal;
-}
-
-.default-label h3 {
-	font-size: 12px;
-	max-width: 170px;
-	word-wrap: break-word;
-	word-break: normal;
-}
-
-.default-label p {
-	font-size: 10px;
-	margin-bottom: 0px;
-	width: 170px;
-	position: absolute;
-	bottom: 20px;
-	left:50%;
-	margin-left: -85px;
-	max-width: 95vw;
-	word-wrap: break-word;
-	word-break: normal;
+	transition: all 0.1s ease-in-out;
+	&:hover {
+		background-color: lightgrey;
+	}
+	h1{
+		font-size: 20px;
+		text-transform: uppercase;
+		word-wrap: break-word;
+		word-break: normal;
+		position:relative;
+		padding-top: 3px;
+	}
+	h2{
+		text-transform: uppercase;
+		font-size: 16px;
+		max-width: 170px;
+		word-wrap: break-word;
+		word-break: normal;
+	}
+	h3 {
+		font-size: 12px;
+		max-width: 170px;
+		word-wrap: break-word;
+		word-break: normal;
+	}
+	p {
+		font-size: 10px;
+		margin-bottom: 0px;
+		width: 170px;
+		position: absolute;
+		bottom: 20px;
+		left:50%;
+		margin-left: -85px;
+		max-width: 95vw;
+		word-wrap: break-word;
+		word-break: normal;
+	}
 }
 
 .shell {
@@ -93,8 +95,8 @@ body {
 	padding: 20px 10px 25px 10px;
 	height: 100vh;
 	width: 100%;
-	
-	
+
+
 	-webkit-box-shadow: 0px 1px 18px 2px rgba(0,0,0,0.27);
 	-moz-box-shadow: 0px 1px 18px 2px rgba(0,0,0,0.27);
 	box-shadow: 0px 1px 18px 2px rgba(0,0,0,0.27);
@@ -105,12 +107,12 @@ input {
 	width: 100%;
 }
 @media screen  {
-	
+
 	body {
 		background-color: #E4E4E4;
 	}
-	
-	
+
+
 }
 
 @media (min-width: 990px) {
@@ -121,7 +123,7 @@ input {
 		position: relative;
 		top:50px;
 	}
-	
+
 	.default-label {
 		height: 68mm;
 		width: 170px;
@@ -130,7 +132,7 @@ input {
 		background-color: white;
 		border-radius:3px;
 	}
-	
+
 }
 
 @media (min-width:600px) and (max-width:989px){
@@ -139,7 +141,7 @@ input {
 		border-radius: 0px;
 		top:50px;
 	}
-	
+
 	.default-label {
 		height: 68mm;
 		width: 170px;
@@ -148,27 +150,57 @@ input {
 		background-color: white;
 		border-radius:3px;
 	}
-	
+
 	#labels {
 		margin-left: 250px;
 	}
 }
 
 @media (max-width: 599px) {
-	.shell  {
-		visibility:hidden;
+	#add-btn-mobile {
+		display: block;
+		position: fixed;
+		right: 25px;
+		bottom: 30px;
+		width: 50px;
+		height: 50px;
+		background-color: orange;
+		border-radius: 100px;
+		z-index: 900;
+		transition: all .3s ease;
 	}
-	
+
+	.add-btn-mobile-active {
+		transform: rotate(-45deg);
+	}
+	.shell  {
+		position: absolute;
+		width: 100%;
+		overflow-x: hidden;
+		left: 800px;
+		transition: all 0.3s ease-in-out;
+
+	}
+
+	.active{
+	left: 0px;
+	}
+
+	.properties {
+		width: 100vw;
+		overflow-x: hidden;
+	}
+
 	#labels {
 		margin-top: 50px;
 		z-index: -1000;
 		float: right;
 	}
-	
+
 	.navbar-default {
 		width: 100%;
 	}
-	
+
 	.default-label {
 		height: 68mm;
 		width: 170px;
@@ -176,38 +208,38 @@ input {
 		background-color: white;
 		color: black;
 	}
-	
+
 	.properties {
-		z-index: 10000;
+		z-index: 800;
 	}
 }
 
-@media print { 
+@media print {
 
 	body {
 		margin: 0px;
 		padding: 0px;
 	}
 
-	#properties, .navbar { 
-		display: none !important; 
+	#properties, .navbar {
+		display: none !important;
 	}
 
 	@page {
 		margin: 0.01cm;
 	}
-	
+
 	#labels {
 		width: 100%;
 	}
-	
+
 	.default-label {
 		height: 68mm;
 		width: 170px;
 	}
-	
+
 	div {page-break-inside: avoid;}
-	
+
 }
 
 .row {
