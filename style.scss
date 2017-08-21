@@ -29,6 +29,7 @@ body {
 }
 .selected {
 	background-color: blue !important;
+	color: white !important;
 }
 
 .default-label {
@@ -220,25 +221,37 @@ input {
 		margin: 0px;
 		padding: 0px;
 	}
-
+	.jumbotron {
+		padding-top: 0px !important;
+	}
+	.shell {
+		display: none;
+	}
 	#properties, .navbar {
 		display: none !important;
 	}
-
+	.row {
+		width: 100%
+	}
 	@page {
 		margin: 0.01cm;
 	}
 
 	#labels {
 		width: 100%;
+		top: 0px;
+    page-break-inside: avoid;
 	}
 
 	.default-label {
-		height: 68mm;
-		width: 170px;
+		width: 20%;
+		page-break-inside: avoid;
 	}
 
-	div {page-break-inside: avoid;}
+	#add-btn-mobile {
+		display: none;
+	}
+
 
 }
 
