@@ -159,7 +159,6 @@ input {
 
 @media (max-width: 599px) {
 	#add-btn-mobile {
-		display: block;
 		position: fixed;
 		right: 25px;
 		bottom: 30px;
@@ -169,6 +168,9 @@ input {
 		border-radius: 100px;
 		z-index: 900;
 		transition: all .3s ease;
+		display: flex;
+		align-content: center;
+		justify-content: center;
 	}
 
 	.add-btn-mobile-active {
