@@ -52,7 +52,11 @@ $(document).ready(function() {
 	$(document).on("click", ".default-label > h2, h3, h1, p", function(e){
 		var OLD_data = $(this).text();
 		var NEW_data = prompt("Aanpassen", OLD_data);
-		$(this).text(NEW_data);
+		if(NEW_data.length != 0){
+			$(this).text(NEW_data);
+		} else {
+			return;
+		}
 	});
 
 
