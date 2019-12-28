@@ -7,6 +7,7 @@ This was my first interactive project that I built.
 ## Dependencies
 - jQuery
 - Bootstrap
+
 _All these dependencies are already included in index.html, no extra actions needed_
 
 ## Get Started
